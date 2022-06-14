@@ -3,7 +3,7 @@
 #########Variables Section##########
 RED='\033[0;31m'
 NOCOLOR='\033[0m'
-firewall_nat='x.x.x.x' # enter your firewall or router LAN gateway
+firewall_lan='x.x.x.x' # enter your firewall or router LAN gateway
 firewall_nat='x.x.x.x'  #enter your public IP, you can google what is my ip to get this
 scan1='Top 10 IP Address and Destination Ports ordered bytes by ip'
 scan2='Top 10 IP address with a destination port of 80 and 443'
