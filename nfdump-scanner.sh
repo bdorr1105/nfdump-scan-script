@@ -9,10 +9,10 @@ scan1='Top 10 IP Address and Destination Ports ordered bytes by ip'
 scan2='Top 10 IP address with a destination port of 80 and 443'
 scan3='Top 10 source IP by protocol'
 scan4='Top 10 Flows by source and destination'
-command1='nfdump -R /path/to/your/root/netflow/logs.directory/ -s ip/bytes -s dstport:p/bytes -n 10'
-command2="nfdump -R /path/to/your/root/netflow/logs.directory/ -c 10 'proto tcp and (dst port 80 or dst port 443) and not src host $firewall_lan and not src host $firewall_nat'"
-command3="nfdump -R /path/to/your/root/netflow/logs.directory/ -O bytes -A srcip,proto,dstport -n 10 -o 'fmt:%sa -> %pr %dp %byt %fl'"
-command4='nfdump -R /path/to/your/root/netflow/logs.directory/ -a -O tstart -n 10'
+command1='nfdump -R /path/to/your/root/netflow/logs/directory/ -s ip/bytes -s dstport:p/bytes -n 10'
+command2="nfdump -R /path/to/your/root/netflow/logs/directory/ -c 10 'proto tcp and (dst port 80 or dst port 443) and not src host $firewall_lan and not src host $firewall_nat'"
+command3="nfdump -R /path/to/your/root/netflow/logs/directory/ -O bytes -A srcip,proto,dstport -n 10 -o 'fmt:%sa -> %pr %dp %byt %fl'"
+command4='nfdump -R /path/to/your/root/netflow/logs/directory/ -a -O tstart -n 10'
 ##################################
 clear # clear the screen of all garbage for a clean experience
 echo "############################"
